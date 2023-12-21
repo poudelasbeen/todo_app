@@ -1,9 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 export default function AddTodo() {
-  const [title, setTitle] = React.useState("");
+  const [title, setTitle] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
